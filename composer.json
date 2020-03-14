@@ -1,0 +1,66 @@
+{
+    "name": "Template Wordpress",
+    "description": "WordPress + Composer",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "composer",
+            "url": "https://wp-languages.github.io"
+        }
+    ],
+    "require": {
+        "wecodemore/wpstarter": "~2.0",
+        "wpackagist-plugin/wp-super-cache": "*",
+        "koodimonni-language/fr_FR": "*",
+        "wpackagist-plugin/disable-gutenberg":"~2.0",
+        "wpackagist-plugin/addthis":"~6.0",
+        "wpackagist-plugin/menu-in-post":"~1.0",
+        "wpackagist-plugin/wordpress-seo":"~13.0",
+        "wpackagist-plugin/user-role-editor":"~4.0",
+        "wpackagist-plugin/acf-image-aspect-ratio-crop":"~3.0",
+        "wpackagist-plugin/rocket-lazy-load":"~2.0",
+        "wpackagist-plugin/wp-nested-pages":"~3.0",
+        "wpackagist-plugin/search-exclude":"~1.0",
+        "wpackagist-plugin/seo-by-rank-math":"~1.0",
+        "wpackagist-plugin/wp-sitemap-page":"~1.0",
+        "wpackagist-plugin/permalink-manager":"~2.0",
+        "wpackagist-plugin/post-type-switcher":"~3.0",
+        "wpackagist-plugin/wps-hide-login":"~1.0",
+        "wpackagist-plugin/wp-mail-logging":"~1.0",
+        "wpackagist-plugin/bbpress":"~2.0",
+        "wpackagist-plugin/buddypress":"~5.0",
+        "wpackagist-plugin/learnpress":"~3.0",
+        "wpackagist-plugin/learnpress-bbpress":"~3.0",
+        "wpackagist-plugin/learnpress-buddypress":"~3.0",
+        "wpackagist-plugin/learnpress-course-review":"~3.0",
+        "wpackagist-plugin/badgeos":"~3.0",
+        "wpackagist-plugin/gamipress":"~1.0",
+        "wpackagist-plugin/gamipress-badgeos-importer":"~1.0",
+        "wpackagist-plugin/gamipress-bbpress-integration":"~1.0",
+        "wpackagist-plugin/gamipress-learnpress-integration":"~1.0",
+        "wpackagist-plugin/gamipress-buddypress-integration":"~1.0",
+        "wpackagist-plugin/wp-social":"~1.0",
+        "wpackagist-plugin/encyclopedia-lexicon-glossary-wiki-dictionary":"~1.0"
+
+
+    },
+    "config": {
+        "vendor-dir": "wp-content/vendor"
+    },
+    "scripts": {
+        "post-install-cmd": "WCM\\WPStarter\\Setup::run",
+        "post-update-cmd": "WCM\\WPStarter\\Setup::run"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "dropin-paths": {
+          "wp-content/languages/": ["vendor:koodimonni-language"],
+          "wp-content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+          "wp-content/languages/themes/": ["vendor:koodimonni-theme-language"]
+        }
+    }
+}
