@@ -17,8 +17,8 @@ Créer le fichier de configuration .env avec les données correctes * :
 
 ```
 WORDPRESS_ENV=development
-DB_NAME=wp_suprameca
-DB_USER=dev
+DB_NAME=myprojectdatabase
+DB_USER=myusername
 DB_PASSWORD=motdepassedb *
 WP_HOME=urlvhost *
 ```
@@ -31,35 +31,21 @@ ajouter :
 DB_HOST=host
 ```
 
-### 2. INSTALLATION INTE :
+### 2. INSTALLATION FRONTEND :
 
-* Copier l'intégration dans le dossier assets du thème.
-* Puis npm install et grunt compile/watch dans ce même dossier.
+* grunt, gulp ou npm runner à configurer pour sass, typescript, etc...
 
-(le dossier node_modules sera ignoré par git en mettant à jour le .gitignore avec wp-content/themes/mon_theme/assets)
+(le dossier node_modules sera ignoré par git en mettant à jour le .gitignore avec wp-content/themes/mon_theme/)
 
 ### 3. PLUGINS :
 
-Plugins livré avec wpackagist :
-*
-*
+Plugins livré avec wpackagist.
 
-Plugins externes à ajouter :
-* Advanced Custom Fields Multilingual
-* Advanced Custom Fields PRO
-* Gravity Forms
-* Gravity Forms Multilingual
-* WPML Multilingual CMS
-* WPML String Translation
-* WPML Translation Management
-* Yoast SEO
-* Yoast SEO Multilingual | VestaThemes.com
-* Ultimate GDPR
+* wp super cache : https://fr.wordpress.org/plugins/wp-super-cache/
 
 ### 4. préparation pour MISE EN PRODUCTION :
 
 * Récupérer BD locale et dossier wp-content/uploads
-* Suivre procédures wiki pour config serveur, runner et gitlab
 
 
 Plus d'infos :
@@ -70,9 +56,6 @@ Plus d'infos :
 Les dépendances de wp-starter :
 * https://github.com/johnpbloch/wordpress
 * https://github.com/vlucas/phpdotenv
-
-Plugins :
-* wp super cache : https://fr.wordpress.org/plugins/wp-super-cache/
 
 Ajouter des langues :
 * https://wp-languages.github.io
